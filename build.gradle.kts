@@ -37,11 +37,11 @@ subprojects {
                 applicationId = "com.github.metacubex.clash"
             }
 
-            minSdk = 21
-            targetSdk = 31
+            minSdk = 26
+            targetSdk = 33
 
             versionName = "2.10.1"
-            versionCode = 210001
+            versionCode = 210002
 
             resValue("string", "release_name", "v$versionName")
             resValue("integer", "release_code", "$versionCode")
@@ -59,7 +59,7 @@ subprojects {
             }
         }
 
-        ndkVersion = "23.0.7599858"
+        ndkVersion = "27.0.11902837 rc2"
 
         compileSdkVersion(defaultConfig.targetSdk!!)
 
