@@ -66,3 +66,18 @@ afterEvaluate {
 tasks.getByName("clean", type = Delete::class) {
     delete(file(geoFilesDownloadDir))
 }
+android {
+    buildTypes {
+        getByName("release") {
+            signingConfig = signingConfigs.getByName("debug")
+            isMinifyEnabled = true
+        }
+    }
+    compileSdk = 34
+    buildToolsVersion = "34.0.0"
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    ndkVersion = "27.0.11902837 rc2"
+}

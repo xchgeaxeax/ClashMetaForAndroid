@@ -19,3 +19,16 @@ dependencies {
     implementation(libs.androidx.viewpager)
     implementation(libs.google.material)
 }
+android{
+    compileSdk = 32
+    buildToolsVersion = "34.0.0"
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = true
+        }
+    }
+}
